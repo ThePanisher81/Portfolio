@@ -985,21 +985,38 @@ section {
 }
 
 /* ========== RESPONSIVE DESIGN ========== */
+/* Tablet & Medium Screens */
 @media (max-width: 968px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    section {
+        padding: 60px 0;
+    }
+
     .hero-content {
         grid-template-columns: 1fr;
+        gap: 30px;
     }
 
     .hero-image {
         display: none;
     }
 
+    .hero {
+        min-height: auto;
+        padding: 100px 0 60px;
+    }
+
     .about-content {
         grid-template-columns: 1fr;
+        gap: 40px;
     }
 
     .about-stats {
         grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
     }
 
     .nav-links {
@@ -1007,12 +1024,14 @@ section {
         right: -100%;
         top: 70px;
         flex-direction: column;
-        background: var(--bg-card);
+        background: rgba(21, 27, 61, 0.98);
+        backdrop-filter: blur(10px);
         width: 100%;
         text-align: center;
         transition: var(--transition);
         padding: 30px;
         box-shadow: var(--shadow);
+        border-bottom: 1px solid rgba(0, 212, 255, 0.2);
     }
 
     .nav-links.active {
@@ -1036,7 +1055,7 @@ section {
     }
 
     .name-text {
-        font-size: 40px;
+        font-size: 42px;
     }
 
     .typing-container {
@@ -1049,6 +1068,7 @@ section {
 
     .contact-cards-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
     }
 
     .resume-card {
@@ -1057,6 +1077,7 @@ section {
 
     .cert-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
     }
 
     .centered-cert {
@@ -1065,6 +1086,7 @@ section {
 
     .projects-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
     }
 
     .project-card:nth-child(10),
@@ -1073,54 +1095,213 @@ section {
         margin-left: 0;
         margin-right: 0;
     }
+
+    .timeline {
+        padding-left: 35px;
+    }
+
+    .timeline-marker {
+        left: -48px;
+        width: 16px;
+        height: 16px;
+    }
+
+    .timeline-content {
+        padding: 20px;
+    }
+
+    .timeline-header h3 {
+        font-size: 20px;
+    }
+
+    .stat-card {
+        padding: 25px 20px;
+    }
+
+    .stat-number {
+        font-size: 32px;
+    }
 }
 
+/* Mobile Phones */
 @media (max-width: 600px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    section {
+        padding: 50px 0;
+    }
+
+    .logo-text {
+        font-size: 20px;
+    }
+
+    .hero {
+        padding: 80px 0 40px;
+    }
+
+    .name-text {
+        font-size: 32px;
+    }
+
+    .typing-container {
+        font-size: 18px;
+    }
+
+    .hello-text {
+        font-size: 16px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+        max-width: 100%;
+    }
+
     .hero-buttons {
         flex-direction: column;
+        width: 100%;
     }
 
     .btn {
         width: 100%;
         justify-content: center;
+        padding: 14px 30px;
+        font-size: 15px;
+    }
+
+    .section-title {
+        font-size: 28px;
+        margin-bottom: 40px;
+    }
+
+    .about-text p {
+        font-size: 16px;
+    }
+
+    .about-intro {
+        font-size: 18px !important;
     }
 
     .about-stats {
         grid-template-columns: 1fr;
+        gap: 15px;
     }
 
-    .timeline {
-        padding-left: 30px;
+    .stat-card {
+        padding: 25px;
     }
 
-    .timeline-marker {
-        left: -42px;
+    .stat-number {
+        font-size: 30px;
     }
 
-    .footer-content {
-        flex-direction: column;
-        gap: 30px;
-        text-align: center;
+    .stat-card i {
+        font-size: 35px;
     }
 
-    .contact-cards-grid {
+    .skills-container {
         grid-template-columns: 1fr;
+        gap: 20px;
     }
 
-    .resume-card {
-        grid-column: 1;
+    .skill-category {
+        padding: 25px;
+    }
+
+    .category-header h3 {
+        font-size: 18px;
+    }
+
+    .skill-tag {
+        font-size: 13px;
+        padding: 7px 14px;
     }
 
     .cert-grid {
         grid-template-columns: 1fr;
+        gap: 20px;
     }
 
     .centered-cert {
         grid-column: 1;
     }
 
+    .cert-card {
+        padding: 25px;
+    }
+
+    .cert-card h4 {
+        font-size: 17px;
+    }
+
+    .timeline {
+        padding-left: 25px;
+    }
+
+    .timeline::before {
+        width: 2px;
+    }
+
+    .timeline-marker {
+        left: -38px;
+        width: 14px;
+        height: 14px;
+        border-width: 3px;
+    }
+
+    .timeline-content {
+        padding: 20px;
+    }
+
+    .timeline-header h3 {
+        font-size: 18px;
+    }
+
+    .company {
+        font-size: 15px;
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    .duration {
+        font-size: 13px;
+    }
+
+    .experience-list li {
+        font-size: 15px;
+        padding-left: 20px;
+    }
+
+    .tech-badge {
+        font-size: 12px;
+        padding: 5px 12px;
+    }
+
     .projects-grid {
         grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .project-card {
+        padding: 25px;
+    }
+
+    .project-card h3 {
+        font-size: 18px;
+    }
+
+    .project-card > p {
+        font-size: 14px;
+    }
+
+    .project-highlights li {
+        font-size: 13px;
+    }
+
+    .tag {
+        font-size: 11px;
+        padding: 5px 10px;
     }
 
     .project-card:nth-child(10),
@@ -1128,5 +1309,74 @@ section {
         grid-column: auto;
         margin-left: 0;
         margin-right: 0;
+    }
+
+    .contact-intro {
+        font-size: 16px;
+        margin-bottom: 40px;
+    }
+
+    .contact-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .resume-card {
+        grid-column: 1;
+    }
+
+    .contact-card {
+        padding: 30px 20px;
+    }
+
+    .contact-card i {
+        font-size: 40px;
+    }
+
+    .contact-card h4 {
+        font-size: 18px;
+    }
+
+    .contact-card span {
+        font-size: 14px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 25px;
+        text-align: center;
+    }
+
+    .social-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .footer-bottom p {
+        font-size: 13px;
+    }
+
+    .scroll-indicator {
+        display: none;
+    }
+}
+
+/* Extra small phones */
+@media (max-width: 375px) {
+    .name-text {
+        font-size: 28px;
+    }
+
+    .typing-container {
+        font-size: 16px;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+
+    .btn {
+        padding: 12px 25px;
+        font-size: 14px;
     }
 }
